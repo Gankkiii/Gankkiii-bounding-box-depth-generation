@@ -1,0 +1,15 @@
+1.用（tsv reader.ipynb）得到 （training_data.json） 不含clip feature
+	需要指定directory_path_annos = r"D:\project\gligen dataset\indoorCVPR_09annotations\Annotations"
+	             directory_path_image = r'D:\project\gligen dataset\indoorCVPR_09\Images'
+
+2.用（process_grounding_mydataset.py）得到 clip feature
+	需要指定 json_path = r"D:\jupyter\project\training_data.json"
+
+3.用（tsv reader.ipynb）得到最终的（train-00.tsv）
+	需要指定 folder = r'D:\project\gligen dataset\out' （clip feature参数位置）
+
+4.用（lineidx_adapter.py）得到需要的（train-00.lineidx）文件
+	需要指定 input_file_path = r'D:\project\GLIGEN\DATA\dataset\train-00.tsv'
+	              output_file_path = r'D:\project\GLIGEN\DATA\dataset\train-00.lineidx'
+
+5.可以开始训练
